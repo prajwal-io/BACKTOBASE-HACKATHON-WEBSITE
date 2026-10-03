@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfaf5">
+  <meta name="description" content="Apply to join B2B Hacks in Hyderabad.">
+  <title>Apply · B2B Hacks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--apply-ink:#111316;--apply-muted:#59616b;--apply-paper:#fbfaf5;--apply-line:#24262a35;--apply-blue:#dcecff;--apply-yellow:#fff0b8;--apply-pink:#ffe0da;--apply-green:#ddf4dd}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;min-height:100vh;padding:clamp(16px,4vw,44px);color:var(--apply-ink);font-family:'DM Sans',Arial,sans-serif;background:radial-gradient(ellipse at 8% 9%,#fff0c2 0,transparent 27%),radial-gradient(ellipse at 94% 15%,#dcecffb8 0,transparent 30%),var(--apply-paper)}
+    .application-shell{position:relative;isolation:isolate;max-width:760px;margin:0 auto;padding:clamp(24px,5vw,54px);overflow:hidden;border:1px solid var(--apply-line);border-radius:26px;background:rgba(255,253,248,.94);box-shadow:0 22px 70px #14141412}
+    .application-shell::before,.application-shell::after{position:absolute;z-index:-1;content:'✳';color:#b7cbe1;font-size:23px;pointer-events:none;animation:quiet-twinkle 4.8s ease-in-out infinite}
+    .application-shell::before{top:82px;right:8%;animation-delay:.8s}.application-shell::after{bottom:13%;left:5%;color:#ddc881;font-size:16px;animation-delay:2s}
+    .popup-brand{display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-size:16px;font-weight:800;letter-spacing:-.4px}
+    .popup-brand:focus-visible,.field input:focus-visible,.field select:focus-visible,.actions button:focus-visible{outline:3px solid #7fb5ed;outline-offset:3px}
+    .popup-mark{width:29px;height:29px;flex:none}
+    .kicker{margin:32px 0 10px;color:#626a75;font:500 12px 'DM Mono',monospace;letter-spacing:1.1px}
+    h1{max-width:620px;margin:0;font-size:clamp(34px,7vw,52px);line-height:1.04;letter-spacing:-2px;text-wrap:balance}
+    .lede{max-width:58ch;margin:15px 0 0;color:var(--apply-muted);font-size:15px;line-height:1.7}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px 18px;margin-top:31px}
+    .field{display:grid;align-content:start;gap:8px;min-width:0;font-size:14px;font-weight:700}
+    .field.full,.team-fields,.actions,.status{grid-column:1/-1}
+    .field input,.field select{width:100%;min-height:49px;padding:12px 14px;border:1px solid #858b8466;border-radius:12px;background:#fff;color:#17191b;font:400 15px 'DM Sans',sans-serif;transition:border-color 160ms,box-shadow 160ms}
+    .field input:hover,.field select:hover{border-color:#34383d99}
+    .field input:focus,.field select:focus{border-color:#497ba7;box-shadow:0 0 0 3px #c9e2f666;outline:0}
+    .hint{color:#626a75;font-size:12px;font-weight:400;line-height:1.45}
+    .team-size-field{position:relative}
+    .team-size-field::after{position:absolute;right:16px;bottom:15px;content:'⌄';color:#525a62;font-size:16px;pointer-events:none}
+    .team-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+    .team-fields:empty{display:none}
+    .honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:3px}
+    .actions button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:12px 24px;border:1.5px solid var(--apply-ink);border-radius:999px;cursor:pointer;font:600 15px 'DM Sans',sans-serif;transition:transform 160ms,background-color 160ms,opacity 160ms}
+    .actions button:hover:not(:disabled){transform:translateY(-2px)}
+    .actions .dark{background:var(--apply-ink);color:#fff}
+    .actions .dark:hover:not(:disabled){background:#2b3034}
+    .actions button:disabled{opacity:.6;cursor:wait}
+    .status{min-height:24px;margin:0;color:#4c5861;font-size:13px;line-height:1.55}
+    .status.error{color:#a32e20}.status.success{color:#23613f}
+    .status.success::before{content:'✓ ';font-weight:800}
+    body{position:relative;isolation:isolate}
+    .ambient-flow{position:fixed;z-index:-1;inset:0;overflow:hidden;pointer-events:none}
+    .ambient-flow::before,.ambient-flow::after{content:'';position:absolute;width:68vw;height:68vw;max-width:760px;max-height:760px;border-radius:50%;filter:blur(54px);opacity:.23;will-change:transform}
+    .ambient-flow::before{top:0;left:-24vw;background:radial-gradient(ellipse at center,rgba(194,221,255,.82),rgba(221,244,221,.36) 45%,transparent 72%);animation:ambient-drift-a 34s ease-in-out infinite alternate}
+    .ambient-flow::after{right:-26vw;bottom:-30vh;background:radial-gradient(ellipse at center,rgba(255,224,218,.72),rgba(255,240,184,.38) 46%,transparent 74%);animation:ambient-drift-b 41s ease-in-out infinite alternate}
+    @keyframes ambient-drift-a{from{transform:translate3d(0,0,0) scale(.92)}to{transform:translate3d(12vw,8vh,0) scale(1.12)}}
+    @keyframes ambient-drift-b{from{transform:translate3d(0,0,0) scale(1.08)}to{transform:translate3d(-11vw,-7vh,0) scale(.9)}}
+    .application-shell{position:relative;z-index:1}
+    .popup-footer{margin-top:27px;padding-top:17px;border-top:1px solid #2222;color:#626a75;font-size:12px;line-height:1.6}
+    .reading-progress{position:fixed;z-index:100;inset:0 auto auto 0;width:100%;height:3px;pointer-events:none;transform:scaleX(0);transform-origin:left center;background:linear-gradient(90deg,#9fc8f4 0%,#f5d879 48%,#f1b9ae 100%)}
+    .application-shell{animation:form-enter 520ms cubic-bezier(.2,.7,.2,1) both}
+    .team-fields .field{animation:field-enter 260ms cubic-bezier(.2,.7,.2,1) both}
+    .team-fields .field:nth-child(2){animation-delay:45ms}.team-fields .field:nth-child(3){animation-delay:90ms}
+    .status{transition:color 180ms ease}.status.success{animation:status-enter 320ms cubic-bezier(.2,.7,.2,1) both}
+    @keyframes form-enter{from{opacity:0;transform:translateY(12px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes field-enter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes status-enter{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes quiet-twinkle{0%,100%{opacity:.32;transform:rotate(-8deg) scale(.9)}50%{opacity:.78;transform:rotate(13deg) scale(1.1)}}
+    @media(max-width:560px){body{padding:12px}.application-shell{padding:24px 19px;border-radius:21px}.form-grid,.team-fields{grid-template-columns:1fr;gap:16px}.kicker{margin-top:27px}.actions button{width:100%}.application-shell::before{right:6%;top:67px}}
+    @media(prefers-reduced-motion:reduce){.ambient-flow::before,.ambient-flow::after,.application-shell,.application-shell::before,.application-shell::after,.team-fields .field,.status.success{animation:none}.actions button,.field input,.field select,.status{transition:none}}
+  </style>
+</head>
+<body><div class="ambient-flow" aria-hidden="true"></div>
+  <main class="application-shell">
+    <a class="popup-brand" href="index.html#top" aria-label="B2B Hacks home">
+      <svg class="popup-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1v38M1 20h38M6.5 6.5l27 27M33.5 6.5l-27 27" fill="none" stroke="currentColor" stroke-width="4"/></svg>
+      B2B HACKS
+    </a>
+    <p class="kicker">OCTOBER 31 · HYDERABAD · 6 HOURS</p>
+    <h1>Apply to build something useful.</h1>
+    <p class="lede">Vidya Jyoti Institute of Technology · State-level 6-hour hackathon · Registration fee: ₹500 · Prize pool: ₹30,000. Share your team details to apply; the team lead counts as member one.</p>
+
+    <form id="registration-form" class="application-form" novalidate>
+      <div class="form-grid">
+        <label class="field">Team lead name
+          <input name="teamLeadName" autocomplete="name" maxlength="120" required>
+        </label>
+        <label class="field">Team name
+          <input name="teamName" autocomplete="organization" maxlength="120" required>
+        </label>
+        <label class="field">Phone number
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel" minlength="7" maxlength="25" pattern="[+0-9() .-]{7,25}" title="Use 7–25 characters with at least one digit." required>
+        </label>
+        <label class="field">Email address
+          <input name="email" type="email" autocomplete="email" maxlength="254" required>
+        </label>
+        <label class="field full">Preferred track
+          <select name="preferredTrack" required>
+            <option value="" selected disabled>Select a track</option>
+            <option value="GenAI">GenAI</option>
+            <option value="Agentic AI">Agentic AI</option>
+            <option value="Open Innovation">Open Innovation</option>
+          </select>
+        </label>
+        <label class="field team-size-field full">How many team members?
+          <select name="teamSize" id="team-size" required>
+            <option value="1" selected>1 member</option>
+            <option value="2">2 members</option>
+            <option value="3">3 members</option>
+            <option value="4">4 members</option>
+          </select>
+          <span class="hint">The team lead is included in this count.</span>
+        </label>
+        <div id="team-fields" class="team-fields" aria-live="polite"></div>
+        <label class="honeypot" aria-hidden="true" tabindex="-1">Leave this field empty
+          <input name="website" tabindex="-1" autocomplete="off">
+        </label>
+        <div class="actions">
+          <button class="dark" id="submit-application" type="submit">Submit application <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="status" id="form-status" role="status" aria-live="polite">Your application details will be submitted securely.</p>
+      </div>
+    </form>
+    <div class="popup-footer">Your details are used to manage B2B Hacks registration and are not visible to the public.</div>
+  </main>
+  <script src="application-config.js"></script>
+  <script>
+    (() => {
+      const progress = document.createElement('div');
+      progress.className = 'reading-progress';
+      progress.setAttribute('aria-hidden', 'true');
+      document.body.prepend(progress);
+      let progressFrame = 0;
+      const updateProgress = () => {
+        if (progressFrame) return;
+        progressFrame = requestAnimationFrame(() => {
+          const scrollable = document.documentElement.scrollHeight - innerHeight;
+          progress.style.transform = `scaleX(${scrollable > 0 ? scrollY / scrollable : 0})`;
+          progressFrame = 0;
+        });
+      };
+      addEventListener('scroll', updateProgress, {passive:true});
+      addEventListener('resize', updateProgress, {passive:true});
+      updateProgress();
+
+      const form = document.getElementById('registration-form');
+      const size = document.getElementById('team-size');
+      const memberFields = document.getElementById('team-fields');
+      const submit = document.getElementById('submit-application');
+      const status = document.getElementById('form-status');
+      const loadedAt = Date.now();
+
+      function renderMembers() {
+        const count = Number(size.value);
+        memberFields.replaceChildren();
+        for (let number = 2; number <= count; number += 1) {
+          const label = document.createElement('label');
+          label.className = 'field';
+          label.style.setProperty('--member-index', String(number - 2));
+          label.textContent = `Team member ${number} name`;
+          const input = document.createElement('input');
+          input.name = `member${number}`;
+          input.autocomplete = 'off';
+          input.maxLength = 120;
+          input.required = true;
+          label.append(input);
+          memberFields.append(label);
+        }
+      }
+
+      function setStatus(message, kind = '') {
+        status.className = `status${kind ? ` ${kind}` : ''}`;
+        status.textContent = message;
+      }
+
+      size.addEventListener('change', renderMembers);
+      renderMembers();
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const values = new FormData(form);
+        if (values.get('website')) return;
+        if (Date.now() - loadedAt < 1600) {
+          setStatus('Please take a moment to review your details and try again.', 'error');
+          return;
+        }
+
+        const phone = String(values.get('phone') || '').trim();
+        if (!/\d/.test(phone)) {
+          setStatus('Please enter a valid phone number with at least one digit.', 'error');
+          form.elements.phone.focus();
+          return;
+        }
+
+        const config = window.B2B_SUPABASE_CONFIG;
+        if (!config?.url || !config?.publishableKey) {
+          setStatus('Applications are temporarily unavailable. Please try again later.', 'error');
+          return;
+        }
+
+        const teamSize = Number(values.get('teamSize'));
+        const payload = {
+          team_lead_name: String(values.get('teamLeadName')).trim(),
+          team_name: String(values.get('teamName')).trim(),
+          phone,
+          email: String(values.get('email')).trim().toLowerCase(),
+          preferred_track: String(values.get('preferredTrack')),
+          team_size: teamSize,
+          member_2: teamSize >= 2 ? String(values.get('member2')).trim() : null,
+          member_3: teamSize >= 3 ? String(values.get('member3')).trim() : null,
+          member_4: teamSize >= 4 ? String(values.get('member4')).trim() : null
+        };
+
+        submit.disabled = true;
+        setStatus('Submitting your application…');
+        try {
+          const response = await fetch(`${config.url.replace(/\/$/, '')}/functions/v1/submit-registration`, {
+            method: 'POST',
+            headers: {
+              apikey: config.publishableKey,
+              Authorization: `Bearer ${config.functionJwt}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ ...payload, website: String(values.get('website') || '') })
+          });
+          if (response.status === 409) {
+            setStatus('This email already has a team registration.', 'error');
+            submit.disabled = false;
+            return;
+          }
+          if (response.status === 429) {
+            setStatus('Too many applications came from this network. Please try again later.', 'error');
+            submit.disabled = false;
+            return;
+          }
+          if (response.status === 400) {
+            setStatus('Please review the team names, phone, email, team size, and selected track, then try again.', 'error');
+            submit.disabled = false;
+            return;
+          }
+          if (response.status >= 500) {
+            setStatus('Applications are temporarily unavailable, so we could not confirm your submission. Please try again shortly.', 'error');
+            submit.disabled = false;
+            return;
+          }
+          if (!response.ok) throw new Error('Registration submission failed');
+          setStatus('Application received. Thank you — your team is on the list.', 'success');
+          form.querySelectorAll('input,select,button').forEach((control) => { control.disabled = true; });
+        } catch {
+          setStatus('We could not submit your application. Check your connection and try again.', 'error');
+          submit.disabled = false;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
