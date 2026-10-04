@@ -5,3 +5,19 @@ Thumbs.db
 !.env.example
 node_modules/
 supabase/.temp/
+
+# Local QA tooling and captures (not part of the deployed site)
+shot.js
+sections.js
+audit.js
+contrast.js
+verify.js
+phonetest.js
+patterndebug.js
+audit-report.json
+shots/
+
+# Agent/skill workspace files
+.agents/
+.codex/
+skills-lock.json

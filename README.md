@@ -21,7 +21,15 @@ The migration filenames and versions match the six migrations already recorded b
 
 ## Run the frontend locally
 
-From the repository root:
+From the repository root, use the bundled zero-dependency Node server (no install step):
+
+```powershell
+node server.js 4173
+```
+
+Open [http://localhost:4173](http://localhost:4173).
+
+Any static file server works as an alternative, for example:
 
 ```powershell
 py -m http.server 8000

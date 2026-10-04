@@ -48,6 +48,11 @@ header {
   column-gap: clamp(8px, 1vw, 16px);
 }
 
+/* Comfortable pointer/touch target for the header brand and pill CTAs. */
+.brand {
+  min-height: 44px;
+}
+
 .nav {
   min-width: 0;
   gap: clamp(16px, 3vw, 48px);
@@ -222,6 +227,7 @@ header {
 }
 
 .pill {
+  min-height: 44px;
   transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
 }
 
@@ -456,7 +462,7 @@ textarea:focus-visible {
 .flow-label,
 .prize-audience {
   display: inline-block;
-  color: #727985;
+  color: #646b76;
   font: 500 12px/1.4 'DM Mono', monospace;
   letter-spacing: 0.7px;
 }
@@ -547,12 +553,12 @@ textarea:focus-visible {
   margin: 30px 2% 0;
   padding: 22px 3px 10px;
   border-top: 1px solid rgba(32, 34, 38, 0.18);
-  color: #6f7781;
+  color: #626a74;
   font: 500 12px/1.5 'DM Mono', monospace;
   letter-spacing: 0.35px;
 }
 
-.site-footer a { color: var(--ink); font: 700 14px/1.4 'DM Sans', Arial, sans-serif; text-decoration: none; }
+.site-footer a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font: 700 14px/1.4 'DM Sans', Arial, sans-serif; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 @media (min-width: 1201px) and (max-width: 1350px) {
@@ -674,7 +680,7 @@ header { background:linear-gradient(110deg,rgba(255,255,255,.22),rgba(220,236,25
 .credit-sponsor:hover { background:transparent; }
 .faq-items { width:100%; }
 .faq-items details { padding:20px 0; }
-.faq-items summary { align-items:center; min-height:30px; line-height:1.5; }
+.faq-items summary { align-items:center; min-height:44px; line-height:1.5; }
 .faq-items summary::after { flex:none; display:grid; place-items:center; width:28px; height:28px; border:1px solid #2222; border-radius:50%; font-size:20px; }
 .faq-items details[open] p { animation:answer-in 250ms ease both; }
 .faq-items p { max-width:75ch; line-height:1.7; }
@@ -782,7 +788,7 @@ header { background:linear-gradient(110deg,rgba(255,255,255,.22),rgba(220,236,25
 .community-partner { display:grid; min-width:0; place-items:center; padding:8px 10px; border:1px solid transparent; border-radius:18px; background:transparent; transition:translate 220ms ease; }
 .partner-logo-stage { display:grid; place-items:center; width:100%; height:154px; overflow:hidden; border-radius:0; background:transparent; }
 .partner-logo-stage img { display:block; width:100%; height:100%; max-width:190px; max-height:146px; object-fit:contain; transition:transform 260ms cubic-bezier(.2,.7,.2,1); }
-@media(max-width:900px) { .community-grid { grid-template-columns:repeat(3,minmax(0,1fr)); max-width:760px; } .community-partner:nth-child(7):nth-last-child(2) { grid-column:2; } }
+@media(max-width:900px) { .community-grid { grid-template-columns:repeat(3,minmax(0,1fr)); max-width:760px; } .community-partner:last-child:nth-child(4n + 1) { grid-column:auto; } }
 @media(max-width:600px) {
   .community-partner:last-child:nth-child(2n + 1) { grid-column:1 / -1; } .community-section { padding:32px 18px 28px; } .community-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 10px; } .community-partner { padding:6px; } .partner-logo-stage { height:128px; } }
 @media(hover:hover) and (prefers-reduced-motion:no-preference) { .community-partner:hover { translate:0 -3px; } .community-partner:hover .partner-logo-stage img { transform:scale(1.045); } }
