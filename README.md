@@ -1,6 +1,6 @@
 # B2B Hacks — Hyderabad 2026
 
-Website source and Supabase registration backend for the six-hour B2B Hacks state-level hackathon at Nanospace, Nanakramguda, Hyderabad on October 31, 2026. Registration fee: ₹400; prize pool: ₹30,000.
+Website source and Supabase registration backend for the 10-hour B2B Hacks state-level event at Nanospace, Nanakramguda, Hyderabad on October 31, 2026, including six focused build hours. Registration fee: ₹400; prize pool: ₹30,000.
 
 Live site: [b2b-hacks-vjit-2026](https://b2b-hacks-vjit-2026.y4wjsz692k.chatgpt.site/)
 

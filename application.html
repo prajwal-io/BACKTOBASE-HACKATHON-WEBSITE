@@ -17,7 +17,8 @@
     .application-shell::before,.application-shell::after{position:absolute;z-index:-1;content:'✳';color:#b7cbe1;font-size:23px;pointer-events:none;animation:quiet-twinkle 4.8s ease-in-out infinite}
     .application-shell::before{top:82px;right:8%;animation-delay:.8s}.application-shell::after{bottom:13%;left:5%;color:#ddc881;font-size:16px;animation-delay:2s}
     .popup-brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:inherit;text-decoration:none;font-size:16px;font-weight:800;letter-spacing:-.4px}
-    .popup-brand:focus-visible,.field input:focus-visible,.field select:focus-visible,.actions button:focus-visible{outline:3px solid #7fb5ed;outline-offset:3px}
+    .popup-brand:focus-visible,.venue-detail-link:focus-visible,.field input:focus-visible,.field select:focus-visible,.actions button:focus-visible{outline:3px solid #7fb5ed;outline-offset:3px}
+    .venue-detail-link{color:inherit;text-decoration-color:#91abc4;text-underline-offset:3px}
     .popup-mark{width:29px;height:29px;flex:none}
     .kicker{margin:32px 0 10px;color:#626a75;font:500 12px 'DM Mono',monospace;letter-spacing:1.1px}
     h1{max-width:620px;margin:0;font-size:clamp(34px,7vw,52px);line-height:1.04;letter-spacing:-2px;text-wrap:balance}
@@ -69,9 +70,9 @@
       <svg class="popup-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 1v38M1 20h38M6.5 6.5l27 27M33.5 6.5l-27 27" fill="none" stroke="currentColor" stroke-width="4"/></svg>
       B2B HACKS
     </a>
-    <p class="kicker">OCTOBER 31 · NANOSPACE, NANAKRAMGUDA · 6 BUILD HOURS</p>
+    <p class="kicker">OCTOBER 31 · 8:00 AM–6:00 PM · 10-HOUR EVENT</p>
     <h1>Apply to build something useful.</h1>
-    <p class="lede">Nanospace, Nanakramguda · State-level 6-hour hackathon · Registration fee: ₹400 · Prize pool: ₹30,000. Share your team details to apply; the team lead counts as member one.</p>
+    <p class="lede"><a class="venue-detail-link" href="https://www.google.com/maps/search/?api=1&amp;query=Nano%20Space%20Vijaya%20Krishna%20Towers%2C%20Nanakramguda%20Road%2C%20Madhava%20Reddy%20Colony%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500032" target="_blank" rel="noopener noreferrer">Nanospace, Nanakramguda · Open in Google Maps</a> · State-level 10-hour event with 6 build hours · Registration fee: ₹400 · Prize pool: ₹30,000. Share your team details to apply; the team lead counts as member one.</p>
 
     <form id="registration-form" class="application-form" novalidate>
       <div class="form-grid">
